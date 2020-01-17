@@ -1,0 +1,16 @@
+[ INFO] [2020-01-17 15:58:42.012] [  restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:679)  : The following profiles are active: dev
+[ INFO] [2020-01-17 15:58:44.527] [  restartedMain] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:59)  : Started ZkfhTestApplication in 4.277 seconds (JVM running for 5.134)
+[ INFO] [2020-01-17 16:13:51.197] [  restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:679)  : The following profiles are active: dev
+[ INFO] [2020-01-17 16:13:53.737] [  restartedMain] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:59)  : Started ZkfhTestApplication in 4.288 seconds (JVM running for 5.186)
+[ INFO] [2020-01-17 16:18:29.121] [  restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:679)  : The following profiles are active: dev
+[ INFO] [2020-01-17 16:18:31.699] [  restartedMain] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:59)  : Started ZkfhTestApplication in 4.322 seconds (JVM running for 5.18)
+[ INFO] [2020-01-17 17:35:12.428] [  restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:679)  : The following profiles are active: dev
+[ INFO] [2020-01-17 17:35:14.976] [  restartedMain] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:59)  : Started ZkfhTestApplication in 4.412 seconds (JVM running for 5.283)
+[ INFO] [2020-01-17 17:38:10.858] [  restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:679)  : The following profiles are active: dev
+[ INFO] [2020-01-17 17:38:13.423] [  restartedMain] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:59)  : Started ZkfhTestApplication in 4.291 seconds (JVM running for 5.178)
+[ INFO] [2020-01-17 17:41:05.144] [  restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:679)  : The following profiles are active: dev
+[ INFO] [2020-01-17 17:41:07.713] [  restartedMain] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:59)  : Started ZkfhTestApplication in 4.32 seconds (JVM running for 5.194)
+[ INFO] [2020-01-17 17:45:46.736] [  restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:679)  : The following profiles are active: dev
+[ INFO] [2020-01-17 17:45:49.425] [  restartedMain] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:59)  : Started ZkfhTestApplication in 4.516 seconds (JVM running for 5.43)
+[ INFO] [2020-01-17 17:49:14.764] [  restartedMain] org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:679)  : The following profiles are active: dev
+[ INFO] [2020-01-17 17:49:17.288] [  restartedMain] org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:59)  : Started ZkfhTestApplication in 4.255 seconds (JVM running for 5.153)

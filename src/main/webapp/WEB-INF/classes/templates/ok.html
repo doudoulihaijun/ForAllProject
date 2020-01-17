@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var aab = JSON.parse($("#data").text());
+			//var aa   =  JSON.parse(aab);
+			alert(JSON.stringify(aab.data))
+			//console.log(aa.code);
+		});
+	</script>
+</head>
+<body>
+<H1>支付成功</H1>
+
+<p id="data" th:text="${json}"/>
+ 
+</body>
+
+
+</html>
+
+
+

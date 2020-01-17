@@ -1,0 +1,8 @@
+spring:
+  profiles:
+       active: dev #选择数据库环境
+
+
+
+   
+

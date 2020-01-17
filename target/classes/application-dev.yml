@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: zkfh_result
+  servlet:
+      multipart:
+        max-file-size : 20MB
+        max-request-size : 100MB
+
+  thymeleaf: #thymeleaf静态资源配置
+          prefix: classpath:/templates/
+          suffix: .html
+          mode: HTML5
+          encoding: UTF-8
+          cache: true #关闭缓存，即时刷新，上线生产环境需要改为true
+
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+      additional-paths: src/main/java #重启目录
+      exclude: WEB-INF/**
+  freemarker:
+    cache: false    #页面不加载缓存，修改即时生效
+
+
+logging:
+  config: classpath:log4j2.yml
+
+server:
+  port: 8080
+

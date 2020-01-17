@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.cn.zkfh.test</groupId>
+	<artifactId>zkfh_test</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>zkfh_test</name>
+	<description>API统一返回接口</description>
+
+	<!-- 统一管理jar -->
+    <parent>
+       	<groupId>com.cn.zkfh.parent.pom</groupId>
+		<artifactId>zkfh_parent_pom</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+    </parent> 
+
+
+  	<dependencies>
+  	
+	  	<dependency>
+	  	 	  <groupId>com.cn.zkfh.log</groupId>
+			  <artifactId>zkfh_log</artifactId>
+			  <version>0.1.1-SNAPSHOT</version>
+	  	</dependency>
+	  	
+	  	<dependency>
+	  	 	<groupId>com.cn.zkfh.result</groupId>
+			<artifactId>zkfh_result</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+	  	</dependency>
+	  	
+	  	
+
+	  	
+  	</dependencies>
+  	
+  	
+
+    <!--项目部署(发布)到私服配置  deploy -e -->
+    <distributionManagement>
+        <!--测试版本仓库或不稳定版本仓库-->
+         <snapshotRepository>
+             <id>Snapshot</id>
+             <url>http://192.168.0.123:8081/repository/Jll_Nexus_Snapshot_Service/</url>
+         </snapshotRepository>
+        <!--正式版本仓库-->
+        <repository>
+             <id>Release</id>
+             <url>http://192.168.0.123:8081/repository/Jll_Nexus_Release_Service/</url>
+        </repository>
+    </distributionManagement>
+
+    <!-- 开发者信息 -->
+    <developers>
+        <developer>
+            <id>110</id>
+            <name>花名:六脉神剑</name>
+            <email>531677565@qq.com</email>
+            <organization>北京中科飞海科技发展有限公司</organization>
+        </developer>
+    </developers>
+
+	<build>
+	
+	        <plugins>
+	        
+	            <plugin>
+	                <groupId>org.apache.maven.plugins</groupId>
+	                <artifactId>maven-compiler-plugin</artifactId>
+	                <configuration>
+	                    <source>8</source>
+	                    <target>8</target>
+	                </configuration>
+	            </plugin>
+	            
+	            <plugin>
+	                <groupId>org.springframework.boot</groupId>
+	                <artifactId>spring-boot-maven-plugin</artifactId>
+            	</plugin>
+            
+	        </plugins>
+	        
+	 </build> 
+	 
+</project>

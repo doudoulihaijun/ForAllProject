@@ -1,0 +1,76 @@
+# 共有8个级别，按照从低到高为：ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF。
+Configuration: #根节点Configuration
+  status: WARN #用来指定 log4j 本身打印日志的级别
+  monitorInterval: 30 #用于指定 log4j 自动重新配置的监测间隔时间，单位是秒(s)，最小的间隔时间是5s
+  Properties: # 定义全局变量
+    Property: # 缺省配置（用于开发环境）。其他环境需要在VM参数中指定，如下：
+      - name: log.level.console
+        value: info
+      - name: log.path
+        value: log
+      - name: project.name
+        value: jll_config_client
+      - name: log.pattern
+        value: "[%5p] [%d{yyyy-MM-dd HH:mm:ss.SSS}] [%15.15t] %l  : %m%n"
+  Appenders:
+    Console:  #输出到控制台 定义输出到控制台的节点
+      name: CONSOLE
+      target: SYSTEM_OUT
+      PatternLayout:
+        pattern: ${log.pattern}
+        
+    #WARN记录
+    RollingFile:
+      - name: EXCEPTION_FILE
+        ignoreExceptions: false
+        fileName: ${log.path}/EXCEPTION/EXCEPTION.log
+        filePattern: "${log.path}/EXCEPTION/$${date:yzyyy-MM}/EXCEPTION-%d{yyyy-MM-dd}-%i.log.gz"
+        Filters:
+         ThresholdFilter:
+           level: WARN
+           onMatch: ACCEPT #匹配    通过
+           onMismatch: DENY #不匹配    拒绝
+        PatternLayout:
+          pattern: ${log.pattern}
+        Policies:
+          TimeBasedTriggeringPolicy:  # 按天分类
+            modulate: true
+            interval: 1
+        DefaultRolloverStrategy:     # 文件最多100个
+          max: 100
+ 
+      - name: BUSSINESS_FILE
+        ignoreExceptions: false
+        fileName: ${log.path}/BUSSINESS/BUSSINESS.log
+        filePattern: "${log.path}/BUSSINESS/$${date:yyyy-MM}/BUSSINESS-%d{yyyy-MM-dd}-%i.log.gz"
+        Filters:
+         ThresholdFilter:
+           level: INFO
+           onMatch: ACCEPT #匹配    通过
+           onMismatch: DENY #不匹配    拒绝
+        PatternLayout:
+          pattern: ${log.pattern}
+        Policies:
+          TimeBasedTriggeringPolicy:  # 按天分类
+            modulate: true
+            interval: 1
+        DefaultRolloverStrategy:     # 文件最多100个
+          max: 100
+
+
+  Loggers:
+    Root:
+      level: INFO
+      AppenderRef: #用来指定该日志输出到哪个Appender
+        - ref: CONSOLE 
+        - ref: EXCEPTION_FILE
+
+    Logger:
+      - name: com.cn #用来指定该Logger所适用的类或者类所在的包全路径
+        level: INFO
+        additivity: false #只在自定义的Appender中进行输出 如果不指定会同时在root中输出
+        AppenderRef:
+            - ref: BUSSINESS_FILE
+
+          
+
